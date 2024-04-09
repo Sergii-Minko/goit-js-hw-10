@@ -38,13 +38,13 @@ const options = {
         messageColor: '#fff',
         color: '#EF4040',
         timeout: 150000,
-        iconUrl: error,
+        iconUrl: '../img/error.svg',
         class: 'custom-close-button',
         onOpening: () => {
           const xbtn = document.querySelector('.iziToast-close');
 
           xbtn.style.color = '#fff'; // Змінюємо колір кнопки зачинення
-          // xbtn.style.setProperty('background-image', error);
+          xbtn.style.setProperty('background-image', 'URL("../img/btn.png")');
 
           xbtn.style.setProperty('opacity', '1');
           xbtn.style.setProperty('fill', '#fff');
