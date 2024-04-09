@@ -36,7 +36,7 @@ const options = {
         messageColor: '#fff',
         color: '#EF4040',
         // timeout: 150000,
-        iconUrl: './img/error.svg',
+        iconUrl: '.../public/img/error.svg',
         class: 'custom-close-button',
         onOpening: () => {
           const xbtn = document.querySelector('.iziToast-close');
