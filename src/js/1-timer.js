@@ -5,7 +5,8 @@ import iziToast from 'izitoast';
 // Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
 import 'izitoast/dist/css/iziToast.min.css';
-const errorimg = `url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAMAAAAPzWOAAAAAllBMVEUAAAD////+//3+//3+//3///////z+//3+//3+//3////////////9//3////+//39//3///3////////////+//3+//39//3///z+//z+//7///3///3///3///3////////+//3+//3+//3+//z+//3+//7///3///z////////+//79//3///3///z///v+//3///+trXouAAAAMHRSTlMAB+j87RBf+PXiCwQClSPYhkAzJxnx05tSyadzcmxmHRbp5d7Gwrh4TDkvsYt/WkdQzCITAAAB1UlEQVRYw+3XaXKCQBCGYSIIighoxCVqNJrEPfly/8vFImKXduNsf/Mc4K1y7FnwlMLQc/bUbj85R6bA1LXRDICg6RjJcZa7NQYtnLUGTpERSiOXxrOPkv9s30iGKDmtbYir3H7OUHJa2ylAuvZzRvzUfs7Ii/2cgfTt54x82s8ZSM848gJmYtroQzA2jHwA+LkBIEuMGt+QIng1igzlyMrkuP2CyOi47axRaYTL5jhDJehoR+aovC29s3iIyly3Eb+hRCvZo2qsGTnhKr2cLDS+J73GsqBI9W80UCmWWpEuhIjh6ZRGjyNRarjzKGJ2Ou2himCvjHwqI+rTqQdlRH06TZQR9ek0hiqiPp06mV4ke7QPX6ERUZxO8Uo3sqrfhxvoRrCpvXwL/UjR9GRHMIvLgke4d5QbiwhM6JV2YKKF4vIl7XIBkwm4keryJVmvk/TfwcmPwQNkUQuyA2/sYGwnXL7GPu4bW1jYsmevrNj09/MGZMOEPXslQVqO8hqykD17JfPHP/bmo2yGGpdZiH3IZvzZa7B3+IdDjjpjesHJcvbs5dZ/e+cddVoDdvlq7x12Nac+iN7e4R8OXTjp0pw5CGnOLNDEzeBs5gVwFniAO+8f8wvfeXP2hyqnmwAAAABJRU5ErkJggg==') no-repeat 50% 50%`;
+const errorimg = '../img/error.svg';
+const xbtnimg = 'URL("../img/btn.png")';
 const date = document.querySelector('#datetime-picker');
 const btn = document.querySelector('[data-start]');
 const day = document.querySelector('[data-days]');
@@ -37,15 +38,13 @@ const options = {
         messageColor: '#fff',
         color: '#EF4040',
         timeout: 150000,
-        iconUrl: '../img/error.svg',
+        iconUrl: errorimg,
         class: 'custom-close-button',
         onOpening: () => {
           const xbtn = document.querySelector('.iziToast-close');
 
           xbtn.style.color = '#fff'; // Змінюємо колір кнопки зачинення
-          xbtn.style.setProperty('background-image', 'URL("../img/btn.png")');
-          // 'URL("../img/btn.png")';
-
+          xbtn.style.setProperty('background-image', xbtnimg);
           xbtn.style.setProperty('opacity', '1');
           xbtn.style.setProperty('fill', '#fff');
           xbtn.style.setProperty('background-size', '12px');
