@@ -62,3 +62,6 @@ button:hover,
 button:focus {
   background: #6c8cff;
 }
+button.iziToast-close {
+  background-image: none !important;
+}
