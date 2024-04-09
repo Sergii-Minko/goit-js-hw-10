@@ -1,6 +1,8 @@
 // Описаний в документації
 import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
+import error from '../img/error.svg';
+import exitbtn from '../img/btn.png';
 // Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -35,16 +37,17 @@ const options = {
         titleColor: '#fff',
         messageColor: '#fff',
         color: '#EF4040',
-        // timeout: 150000,
-        iconUrl: '.../public/img/error.svg',
+        timeout: 150000,
+        iconUrl: error,
         class: 'custom-close-button',
         onOpening: () => {
           const xbtn = document.querySelector('.iziToast-close');
 
           xbtn.style.color = '#fff'; // Змінюємо колір кнопки зачинення
-          xbtn.style.setProperty('background-image', 'url("./img/btn.svg")');
+          // xbtn.style.setProperty('background-image', error);
 
           xbtn.style.setProperty('opacity', '1');
+          xbtn.style.setProperty('fill', '#fff');
           xbtn.style.setProperty('background-size', '12px');
           const messagealert = document.querySelector('.iziToast');
           messagealert.style.setProperty('width', '340px');
