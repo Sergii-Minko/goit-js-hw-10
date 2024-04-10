@@ -2,12 +2,11 @@
 import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
 import errorimgImp from '../img/error.svg';
+import xbtnimg from '../img/btn.png';
 
 // Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
 import 'izitoast/dist/css/iziToast.min.css';
-const errorimg = '../img/error.svg';
-const xbtnimg = 'URL("../img/btn.png")';
 const date = document.querySelector('#datetime-picker');
 const btn = document.querySelector('[data-start]');
 const day = document.querySelector('[data-days]');
@@ -38,14 +37,14 @@ const options = {
         titleColor: '#fff',
         messageColor: '#fff',
         color: '#EF4040',
-        timeout: 150000,
+        // timeout: 150000,
         iconUrl: errorimgImp,
         class: 'custom-close-button',
         onOpening: () => {
           const xbtn = document.querySelector('.iziToast-close');
 
           xbtn.style.color = '#fff'; // Змінюємо колір кнопки зачинення
-          xbtn.style.setProperty('background-image', xbtnimg);
+          xbtn.style.backgroundImage = `url('${xbtnimg}')`;
           xbtn.style.setProperty('opacity', '1');
           xbtn.style.setProperty('fill', '#fff');
           xbtn.style.setProperty('background-size', '12px');

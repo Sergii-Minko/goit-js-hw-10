@@ -2,8 +2,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import errorimgImp from '../img/error.svg';
 import okimgImp from '../img/ok.svg';
-const errorimg = '../img/error.svg';
-const okimg = '../img/ok.svg';
+
 const form = document.querySelector('.form');
 
 const input = document.querySelector('input[name="delay"][required]');
