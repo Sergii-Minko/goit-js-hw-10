@@ -1,6 +1,7 @@
 // Описаний в документації
 import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
+import errorimgImp from '../img/error.svg';
 
 // Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
@@ -38,7 +39,7 @@ const options = {
         messageColor: '#fff',
         color: '#EF4040',
         timeout: 150000,
-        iconUrl: errorimg,
+        iconUrl: errorimgImp,
         class: 'custom-close-button',
         onOpening: () => {
           const xbtn = document.querySelector('.iziToast-close');
