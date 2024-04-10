@@ -1,5 +1,6 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import errorimgImp from '../img/error.svg';
 const errorimg = '../img/error.svg';
 const okimg = '../img/ok.svg';
 const form = document.querySelector('.form');
@@ -64,7 +65,7 @@ function onSubmitBtnClick(event) {
         messageColor: '#fff',
         progressBarColor: '#B51B1B',
         iconColor: '#fff',
-        iconUrl: errorimg,
+        iconUrl: errorimgImp,
       });
     });
 
